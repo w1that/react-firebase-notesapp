@@ -24,9 +24,9 @@ function MyNotes() {
     }
 
     return (
-        <div style={{background:"#161616"}} className=" h-screen text-white">
+        <div style={{background:"#161616"}} className=" text-white sm:h-screen">
         
-        <div className="w-1/2 mx-auto h-screen">
+        <div className="w-1/2 mx-auto ">
             <CreateNote/>
             <NotesList/>
         </div>

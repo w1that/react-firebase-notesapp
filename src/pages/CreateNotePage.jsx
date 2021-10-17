@@ -33,12 +33,12 @@ function CreateNotePage() {
 
   return (
     <div style={{ background: "#161616" }} className="w-full h-screen ">
-      <div className="w-2/3 mx-auto">
+      <div className="sm:w-2/3 mx-auto">
         <div className="flex pt-40 pb-3  ">
           <input
             onChange={(e) => settitle(e.target.value)}
             placeholder="title"
-            className="text-xl w-1/2 px-6  mx-auto bg-purple-200 rounded-md h-10  outline-none"
+            className="text-xl sm:w-1/2 w-5/6  px-6  mx-auto bg-purple-200 rounded-md h-10  outline-none"
           ></input>
         </div>
         <div className="flex ">
@@ -46,7 +46,7 @@ function CreateNotePage() {
           <textarea
             onChange={(e) => setcontent(e.target.value)}
             placeholder="note here"
-            className="resize-none  mx-auto w-1/2 outline-none bg-purple-200 rounded-md h-48 p-4 px-6 text-xl"
+            className="resize-none  mx-auto sm:w-1/2 w-5/6  outline-none bg-purple-200 rounded-md h-48 p-4 px-6 text-xl"
           />
         </div>
         <div className="  pt-5">

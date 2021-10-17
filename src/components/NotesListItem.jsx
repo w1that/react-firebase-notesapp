@@ -5,9 +5,10 @@ import { db } from '../firebase';
 function NotesListItem({title, content}) {
     
     return (
-        <div className="bg-gray-800 border border-white py-2 my-2">
-                <h1>{title}</h1>
-                <h1>{content}</h1>
+        <div className="bg-gray-800 border border-white py-2 mb-2 sm:my-2 ">
+                
+                <h1>title: {title}</h1>
+                <h1>content: {content}</h1>
         </div>
     )
 }

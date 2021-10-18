@@ -11,14 +11,21 @@ function CreateNotePage() {
   const user = auth.currentUser;
   const [title, settitle] = useState("");
   const [content, setcontent] = useState("");
+
   const publishHandler = async () => {
     if (title.length < 3 || content.length < 10) {
       toast.warn("fill the fields");
       return;
     } else {
-      await publishNote({ title: title, content: content }, user.uid);
+      await publishNote({ title: title, content: content }, user.uid, {
+        year: new Date().getFullYear(),
+        month: new Date().getMonth() + 1,
+        day: new Date().getDate(),
+        hour: new Date().getHours(),
+        minute: new Date().getMinutes(),
+      });
       toast.success("successfully created");
-      history.push("/mynotes");
+      history.push("/notes");
     }
   };
 
@@ -51,12 +58,10 @@ function CreateNotePage() {
         </div>
         <div className="  pt-5">
           <div className="p-1 w-96 mx-auto flex justify-around">
-            <Link to="/mynotes">
-            <button
-              className="transition duration-400 bg-purple-300 font-bold px-10 py-2 ring-2 ring-purple-500 hover:bg-purple-500 rounded-md"
-            >
-              Cancel
-            </button>
+            <Link to="/notes">
+              <button className="transition duration-400 bg-purple-300 font-bold px-10 py-2 ring-2 ring-purple-500 hover:bg-purple-500 rounded-md">
+                Cancel
+              </button>
             </Link>
             <button
               onClick={publishHandler}

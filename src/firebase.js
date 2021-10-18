@@ -47,11 +47,12 @@ export const logout = () => {
     auth.signOut();
   };
 
-export const publishNote = async (text, userId) =>{
+export const publishNote = async (text, userId, date) =>{
     try {
         const docRef = await addDoc(collection(db, "notes"), {
           text:text,
-          userId:userId
+          userId:userId,
+          date:date
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {

@@ -1,10 +1,12 @@
 
 import { Route } from 'react-router';
-import MyNotes from './pages/MyNotes';
 import WelcomePage from './pages/WelcomePage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CreateNotePage from './pages/CreateNotePage';
+import Notes from './pages/Notes';
+import MyNotes from './pages/MyNotes';
+import BottomMenuMobile from './components/BottomMenuMobile';
 
 function App() {
 
@@ -13,8 +15,10 @@ function App() {
     <div className="App">
     <ToastContainer/>
       <Route exact path="/"><WelcomePage/></Route>
-      <Route exact path="/mynotes"><MyNotes/></Route>
+      <Route exact path="/notes"><Notes/></Route>
       <Route path="/createnew"><CreateNotePage/></Route>
+      <Route path="/mynotes"><MyNotes/></Route>
+      <div className="sm:hidden"><BottomMenuMobile/></div>
     </div>
   );
 }

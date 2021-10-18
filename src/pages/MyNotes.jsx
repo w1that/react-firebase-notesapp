@@ -28,10 +28,10 @@ function MyNotes() {
   return (
     <div
       style={{ background: "#161616" }}
-      className=" text-white h-screen sm:h-screen"
+      className=" text-white sm:h-screen"
     >
       <div className="w-full sm:w-1/2 mx-auto flex justify-between">
-        <div className="w-1/3">
+        <div className="w-1/3 hidden sm:inline-block">
           <div>
             <CreateNote />
           </div>

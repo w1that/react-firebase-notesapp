@@ -20,7 +20,7 @@ function MyNotesList() {
   }, []);
 
   return (
-    <div className="w-2/3 ">
+    <div className="w-full sm:w-2/3 mb-16 mt-8 ">
       {notes.length === 0 && !loading ? (
         <div className="w-1/2 py-6 px-5 bg-gray-700 mx-auto mt-48 rounded">
           <h1 className="text-white">There isn't any notes here.</h1>

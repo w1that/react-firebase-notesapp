@@ -14,7 +14,7 @@ function LogOut() {
 
   return (
     <div className="px-4 w-5/6 flex sm:py-2 sm:text-xl sm:font-bold text-white rounded-full ring ring-purple-700 hover:bg-purple-700 sm:mt-10">
-    <span className="p-1"><img width="30px" src={logoutic} /></span>  <button >
+    <span className="p-1"><img width="30px" src={logoutic} /></span>  <button onClick={logouthandler}>
         Log out
       </button>
      

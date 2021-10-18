@@ -19,7 +19,7 @@ function NotesList() {
   }
 
   return (
-    <div className="w-full sm:w-2/3 ">
+    <div className="w-full mb-16 mt-8 sm:w-2/3 ">
       {!loading &&
         notes.map((doc) => (
           <NotesListItem text={doc.data().text} userId={doc.data().userId} />

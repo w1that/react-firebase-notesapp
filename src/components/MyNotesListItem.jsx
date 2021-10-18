@@ -17,7 +17,7 @@ function MyNotesListItem({ text, userId }) {
   }, []);
 
   return (
-    <div className="bg-gray-800 border border-gray-600 py-2 mb-2 sm:my-2 px-3 py-3 font-medium rounded-md">
+    <div className="bg-gray-800 w-5/6 mx-auto border border-gray-600 py-2 mb-2 sm:my-2 px-3 py-3 font-medium rounded-md">
       <div className=" bg-green-800 text-xl w-full p-3 rounded-md mb-2 text-center hover:bg-green-700">
         <h1>{text.title}</h1>
       </div>

@@ -18,7 +18,7 @@ function App() {
       <Route exact path="/notes"><Notes/></Route>
       <Route path="/createnew"><CreateNotePage/></Route>
       <Route path="/mynotes"><MyNotes/></Route>
-      <div className="sm:hidden"><BottomMenuMobile/></div>
+      <Route path={["/notes", "/createnew", ["/mynotes"]]}><div className="sm:hidden"><BottomMenuMobile/></div></Route>
     </div>
   );
 }
